@@ -1,0 +1,247 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --accent: #2b6ef6;
+    --muted: #6b7280;
+    --radius: 10px;
+    --max-width: 900px;
+    --text: #0f172a;
+    --success: #16a34a;
+}
+
+/* Typography */
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    padding: 28px;
+}
+
+/* Profile header */
+.profile {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid rgba(43, 110, 246, 0.12);
+}
+
+.name {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.tagline {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Sections */
+section {
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px 12px;
+    background: linear-gradient(90deg, rgba(43, 110, 246, 0.08), rgba(43, 110, 246, 0.03));
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px dashed #eef2ff;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Contact form */
+.form-row {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6eefb;
+    background: #fbfdff;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 4px 14px rgba(43, 110, 246, 0.08);
+}
+
+/* Styled submit button */
+.form-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, var(--accent), #155de0);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(43, 110, 246, 0.18);
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(43, 110, 246, 0.20);
+}
+
+/* status message */
+.form-status {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.form-status.success {
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width:720px) {
+    .profile {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .profile-img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    thead th {
+        display: none;
+    }
+
+    /* simpler mobile table view */
+    tbody td {
+        display: block;
+        width: 100%;
+    }
+
+    tbody td+td {
+        margin-top: 6px;
+    }
+}
+
+/* Toast styles */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 14px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 20px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s;
+
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    top: 40px;
+}
+
+#toast.success {
+    background-color: var(--success);
+}
+
+#toast.error {
+    background-color: #dc2626;
+}

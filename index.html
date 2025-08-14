@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saidu Musa Auna — Biodata</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <!-- Header -->
+    <header class="profile">
+      <img src="https://i.postimg.cc/fRr1M2hV/profile.jpg" alt="Profile picture of Saidu Musa Auna" class="profile-img">
+      <div class="profile-info">
+        <h1 class="name">Saidu Musa Auna</h1>
+        <p class="tagline">Junior QA Tester | Curious | Detail-Oriented | Learning Automation</p>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        I am a motivated QA tester interested in manual and automated testing. I enjoy finding bugs,
+        improving user experience, and helping teams deliver reliable software.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="education">
+      <h2>Education</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Qualification</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ibrahim Badamasi Babangida University</td>
+            <td>Bachelor of Science (BSc)</td>
+            <td>2015 - 2019</td>
+          </tr>
+          <tr>
+            <td>National Open University</td>
+            <td>Master of Science (MSc)</td>
+            <td>In-View</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Key Responsibilities</th>
+            <th>Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Timart</td>
+            <td>QA Tester (Junior)</td>
+            <td>Manual testing, test cases, bug reporting, regression testing, UI checks, exploratory testing</td>
+            <td>Aug. 2023 - Present</td>
+          </tr>
+          <tr>
+            <td>Sysbit Tech Company</td>
+            <td>QA Intern</td>
+            <td>Test cases, manual testing, bug reporting, UI checks, exploratory testing</td>
+            <td>Sept. 2022 - April 2023</td>
+          </tr>
+          <tr>
+            <td>DANA Pharmaceutical</td>
+            <td>QA Scientist</td>
+            <td>Quality checks on raw materials, in-process, and finished products to meet regulatory standards</td>
+            <td>Sept. 2022 - July 2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+      <h2>Contact Me</h2>
+      <form id="contactForm" action="https://formspree.io/f/mqaljqar" method="POST">
+        <div class="form-row">
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" id="firstName" name="First name" placeholder="First name" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" id="lastName" name="Last name" placeholder="Last name" required>
+        </div>
+        
+        <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="you@mail.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write a short message..." required></textarea>
+      </div>
+
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+    <div id="toast"></div>
+
+  </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Saidu Musa Auna — QA Portfolio</p>
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
