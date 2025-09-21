@@ -45,3 +45,6 @@ function showToast(message, type) {
 }
 
 
+document.querySelector('a[download]').addEventListener('click', function() {
+  showToast("Your CV is downloading...", "success");
+});

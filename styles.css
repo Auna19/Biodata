@@ -1,3 +1,30 @@
+/* Make Send Message and Download CV buttons same size and font */
+.btn-same,
+.btn.btn-primary.no-underline.btn-same {
+    width: 200px !important;
+    font-size: 1rem !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+    display: inline-block !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    white-space: nowrap !important;
+    font-family: inherit !important;
+    border: none !important;
+    background: linear-gradient(180deg, var(--accent), #155de0) !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    box-shadow: 0 6px 18px rgba(43, 110, 246, 0.18) !important;
+    transition: transform 120ms ease, box-shadow 120ms ease !important;
+    cursor: pointer !important;
+}
+
+/* Add spacing between the two buttons */
+.form-actions .btn-same:not(:last-child) {
+    margin-right: 16px;
+}
 /* Basic reset */
 * {
     box-sizing: border-box;
@@ -244,4 +271,11 @@ textarea:focus {
 
 #toast.error {
     background-color: #dc2626;
+}
+
+/* Make link look exactly like button */
+.btn.btn-primary.no-underline {
+    text-decoration: none;   /* remove underline */
+    display: inline-block;   /* behave like button */
+    text-align: center;
 }
