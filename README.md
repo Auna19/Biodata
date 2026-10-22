@@ -40,6 +40,8 @@ My BioData/
 ├── styles.css        # Design system, layout, and responsive styles
 ├── script.js         # Form validation, toast manager, and interactivity
 ├── profile.jpg       # Optimized, high-DPI profile image
+├── favicon.svg       # Modern vector favicon (SA monogram + QA badge)
+├── favicon.png       # PNG fallback favicon
 └── README.md         # Project documentation
 ```
 
