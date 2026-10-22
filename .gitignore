@@ -1,0 +1,8 @@
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Raw uncropped camera source
+Mr Musa (2).jpg.jpeg
